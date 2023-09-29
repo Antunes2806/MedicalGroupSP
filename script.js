@@ -1,14 +1,19 @@
 function validacao() {
+    var senhalocal = localStorage.getItem("senha").value;
+    var emaillocal = localStorage.getItem("email").value;
     var dados ={
-        'usuarios': ['cleuza@gmail.com', "admin"],
-        'senha': ['mari', "admin"],
+
+        'usuarios': ['cleuza@gmail.com', "admin", ],
+        'senha': ['mari', "admin", ],
         'cpf': ['23987144403'],
     }
+   
+
     localStorage.setItem("dados", dados);
     var senha = document.getElementById("senha");
 var users = document.getElementById("email");
-if ( users.value == dados.usuarios[0])    
-if ( senha.value == dados.senha[0])
+if ( users.value == dados.usuarios[0] )    
+if ( senha.value == dados.senha[0] )
  {window.location.assign("user.html");
     window.location.replace("user.html");
     localStorage.setItem("user", users).value;
@@ -81,9 +86,10 @@ function consulta()    {
          userPrint.textContent = result_text ;
         }
         function cadastro()   {
-            let email = document.getElementById("email");
-            let senha = document.getElementById("senha");
-            localStorage.setItemItem("senha",senha );
+            var email = document.getElementById("email");
+            var senha = document.getElementById("senha");
+            localStorage.setItem("senha",senha );
             localStorage.setItem("email",email);
+            window.alert("Cadastro realizado");
         }
         
