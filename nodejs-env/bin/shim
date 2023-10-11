@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH='/home/aluno/nodejs-env/lib/node_modules'
+export NPM_CONFIG_PREFIX='/home/aluno/nodejs-env'
+export npm_config_prefix='/home/aluno/nodejs-env'
+exec 'nodejs-env/bin/node' "$@"

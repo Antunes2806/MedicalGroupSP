@@ -10,6 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeBritoBR/MedicalGroupSP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GuilhermeBritoBR/MedicalGroupSP/issues"
+  },
+  "homepage": "https://github.com/GuilhermeBritoBR/MedicalGroupSP#readme"
 }
