@@ -17,4 +17,25 @@ router.get('/consultas', (req, res) => {
   });
 });
 
+// Adicione uma rota para a submissão de dados do formulário
+router.post('/consultas', (req, res) => {
+  const { nome, medico, motivo, data } = req.body; 
+console.log(req.body)
+  const sql = 'INSERT INTO consultas (nome, medico, motivo, data) VALUES (?, ?, ?, ?)';
+  
+  db.query(sql, [nome, medico, motivo, data], (err, result) => {
+    if (err) {
+      console.error('Erro na inserção de dados: ' + err.message);
+      return res.status(500).send('Erro na inserção de dados');
+    }
+    
+    res.redirect('/consultas'); // Redirecione de volta para a página de consultas após a inserção
+  });
+});
+
 module.exports = router;
+
+
+
+
+ 

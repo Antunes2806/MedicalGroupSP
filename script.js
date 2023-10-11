@@ -8,7 +8,7 @@ function validacao() {
         'cpf': ['23987144403'],
     }
    
-
+    const mysql = require('mysql');
     localStorage.setItem("dados", dados);
     var senha = document.getElementById("senha");
 var users = document.getElementById("email");
