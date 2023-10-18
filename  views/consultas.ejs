@@ -27,3 +27,23 @@
   </table>
 </body>
 </html>
+
+
+<!-- views/consultas.ejs -->
+
+<h2>Agendar Consulta</h2>
+<form action="/consultas" method="post">
+  <label for="paciente">Paciente:</label>
+  <input type="text" name="paciente" id="paciente" required>
+  <br>
+  <label for="especialidade">Especialidade:</label>
+  <input type="text" name="especialidade" id="especialidade" required>
+  <br>
+  <label for="dor">Dor:</label>
+  <input type="text" name="dor" id="dor" required>
+  <br>
+  <label for="dia">Dia:</label>
+  <input type="date" name="dia" id="dia" required>
+  <br>
+  <input type="submit" value="Agendar">
+</form>
